@@ -1,4 +1,5 @@
 # battleship
+You can use mocks to make sure that DOM methods like appendChild are being called, but try your best to keep those things outside of the app logic.
 
 1. Begin your app by creating the Ship factory function.
 
