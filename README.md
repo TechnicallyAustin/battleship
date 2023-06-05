@@ -24,7 +24,7 @@ You can use mocks to make sure that DOM methods like appendChild are being calle
     E. Gameboards should be able to report whether or not all of their ships have been sunk.
 
 3. Create Player.
-
+`
     A. Players can take turns playing the game by attacking the enemy Gameboard.
 
     B. The game is played against the computer, so make the ‘computer’ capable of making random plays. The AI does not have to be smart, but it should know whether or not a given move is legal. (i.e. it shouldn’t shoot the same coordinate twice).
