@@ -19,7 +19,6 @@ const gameboard = require("../src/game/gameboard")
             expect(newBoard).toHaveProperty("coordinateY");
 
         });
-
     
         test("Gameboard displays missed attacks", () => {
             const newBoard = gameboard(3);
@@ -43,14 +42,20 @@ const gameboard = require("../src/game/gameboard")
             newBoard.recieveAttack(1, 5);
             expect(newBoard.allShipsSunk()).toBe(true);
         });
-    describe('Gameboard.placeShips()', () => {
-        test("Gameboard places the ships at given the coordinaates", () => {
-            const newBoard = gameboard(3)
-            newBoard.placeShips("dingy",1,4);
-            
-            // asserts that the ship has bee placed at the correct coordinates
-            expect(newBoard.gameboardState[1][4]).toBe("dingy")
-            
+
+        describe('gameboard.update()', () => {
+            test("Gameboard.update() updates the", () => {
+            });
+        });
+        
+            describe('Gameboard.placeShips()', () => {
+                test("Gameboard places the ships at given the coordinaates", () => {
+                    const newBoard = gameboard(3)
+                    newBoard.placeShips("dingy",1,4);
+                    
+                    // asserts that the ship has bee placed at the correct coordinates
+                    expect(newBoard.gameboardState[1][4]).toBe("dingy")
+                    
             //asserts that the neighbooring grid cells are empty
             expect(newBoard.gameboardState[2][4]).toBe("")
             expect(newBoard.gameboardState[3][4]).toBe("");
