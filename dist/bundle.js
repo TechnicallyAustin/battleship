@@ -636,6 +636,47 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./src/content/buildPage.js":
+/*!**********************************!*\
+  !*** ./src/content/buildPage.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   buildPage: () => (/* binding */ buildPage)\n/* harmony export */ });\n/* harmony import */ var _footerContent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./footerContent */ \"./src/content/footerContent.js\");\n/* harmony import */ var _footerContent__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_footerContent__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _headerContent__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./headerContent */ \"./src/content/headerContent.js\");\n/* harmony import */ var _headerContent__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_headerContent__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _mainContent__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./mainContent */ \"./src/content/mainContent.js\");\n/* harmony import */ var _mainContent__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_mainContent__WEBPACK_IMPORTED_MODULE_2__);\n\n\n\nfunction buildPage() {\n  (_headerContent__WEBPACK_IMPORTED_MODULE_1___default());\n  (_mainContent__WEBPACK_IMPORTED_MODULE_2___default());\n  (_footerContent__WEBPACK_IMPORTED_MODULE_0___default());\n}\n\n//# sourceURL=webpack://battleship/./src/content/buildPage.js?");
+
+/***/ }),
+
+/***/ "./src/content/footerContent.js":
+/*!**************************************!*\
+  !*** ./src/content/footerContent.js ***!
+  \**************************************/
+/***/ ((module) => {
+
+eval("function footerContent() {}\nmodule.exports = footerContent;\n\n//# sourceURL=webpack://battleship/./src/content/footerContent.js?");
+
+/***/ }),
+
+/***/ "./src/content/headerContent.js":
+/*!**************************************!*\
+  !*** ./src/content/headerContent.js ***!
+  \**************************************/
+/***/ ((module) => {
+
+eval("function headerContent() {}\nmodule.exports = headerContent;\n\n//# sourceURL=webpack://battleship/./src/content/headerContent.js?");
+
+/***/ }),
+
+/***/ "./src/content/mainContent.js":
+/*!************************************!*\
+  !*** ./src/content/mainContent.js ***!
+  \************************************/
+/***/ ((module) => {
+
+eval("function mainContent() {}\nmodule.exports = mainContent;\n\n//# sourceURL=webpack://battleship/./src/content/mainContent.js?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
@@ -643,7 +684,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap */ \"./node_modules/bootstrap/dist/js/bootstrap.esm.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _src_css_styles_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../src/css/styles.css */ \"./src/css/styles.css\");\n\n\n\n\ndocument.addEventListener(\"DOMContentLoaded\", function () {\n  console.log(\"DOM fully loaded and parsed\");\n});\n\n//# sourceURL=webpack://battleship/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap */ \"./node_modules/bootstrap/dist/js/bootstrap.esm.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _src_css_styles_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../src/css/styles.css */ \"./src/css/styles.css\");\n/* harmony import */ var _page_createPage__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./page/createPage */ \"./src/page/createPage.js\");\n\n\n\n\n\ndocument.addEventListener(\"DOMContentLoaded\", function () {\n  console.log(\"DOM fully loaded and parsed\");\n  (0,_page_createPage__WEBPACK_IMPORTED_MODULE_3__.createPage)();\n});\n\n//# sourceURL=webpack://battleship/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/page/createPage.js":
+/*!********************************!*\
+  !*** ./src/page/createPage.js ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   createPage: () => (/* binding */ createPage)\n/* harmony export */ });\n/* harmony import */ var _content_headerContent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../content/headerContent */ \"./src/content/headerContent.js\");\n/* harmony import */ var _content_headerContent__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_content_headerContent__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _content_mainContent__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../content/mainContent */ \"./src/content/mainContent.js\");\n/* harmony import */ var _content_mainContent__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_content_mainContent__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _content_footerContent__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../content/footerContent */ \"./src/content/footerContent.js\");\n/* harmony import */ var _content_footerContent__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_content_footerContent__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _content_buildPage__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../content/buildPage */ \"./src/content/buildPage.js\");\nfunction _typeof(obj) { \"@babel/helpers - typeof\"; return _typeof = \"function\" == typeof Symbol && \"symbol\" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && \"function\" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; }, _typeof(obj); }\n\n\n\n\nfunction createPage() {\n  var page = document.querySelector('.page-content');\n  var pageElements = {\n    header: function header() {\n      var newHeader = page.appendChild(document.createElement('main'));\n      newHeader.setAttribute(\"class\", 'header w-100 bg-light');\n    },\n    main: function main() {\n      var newMain = page.appendChild(document.createElement(\"main\"));\n      newMain.setAttribute(\"class\", \"main w-100 bg-warning\");\n    },\n    footer: function footer() {\n      var newFooter = page.appendChild(document.createElement('footer'));\n      newFooter.setAttribute(\"class\", 'footer w-100 bg-light');\n    }\n  };\n  pageElements.header();\n  pageElements.main();\n  pageElements.footer();\n  _content_buildPage__WEBPACK_IMPORTED_MODULE_3__.buildPage;\n  console.log(_typeof(createPage));\n}\n\n//# sourceURL=webpack://battleship/./src/page/createPage.js?");
 
 /***/ }),
 
