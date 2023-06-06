@@ -89,11 +89,11 @@ const gameboard = require("../src/game/gameboard")
 
             test("recieveAttack calls ship.hit() and and records a missed shot to attack log",() =>{
                 const newBoard = gameboard(3);
+                const shipHitMock = jest.spyOn(gameboard.recieveAttack, "ship.hit")
 
                 newBoard.placeShips("dingy",1,4);
                 newBoard.recieveAttack(1,4);
 
-                const shipHitMock = jest.spyOn(gameboard.recieveAttack, "ship.hit")
                 expect(shipHitMock).toHaveBeenCalled();
 
                 expect(gameboard.attackLog[1][4]).toBe("dingy");
