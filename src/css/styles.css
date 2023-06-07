@@ -1,29 +1,41 @@
-.page-content{
+.html{
     height: 100vh;
-    max-height: 100vh;
+    width: 100vw;
+    background-color: black;
+}
+
+.page-content{
+    height: 100%;
+    max-height: 100%;
+    width: 100%;
     display: grid;
     grid-template-rows: 1fr 18fr 1fr;
     margin-left: 0;
     margin-top: 0;
+    align-items: start;
 }
 
 .main{
-    height: 100%;
-    max-height: 95vh;
+    height: 92vh;
+    max-height: 90vh;
     width: 100%;
     display: grid;
     grid-template-areas:
     "ships ships ships"
     "board board log"
-    "board board log";
-    grid-template-rows: 1fr 2fr 2fr;
+    "board board log"
+    "display display log";
+    grid-template-rows: 2fr 3fr 3fr 1fr;
     grid-template-columns: 4fr 4fr 3fr;
     justify-content: center;
     align-items: center;
-    column-gap: none;
+    column-gap: 2%;
+
 }
 
 .ship-container{
+    height: auto;
+    width: 100%;
     grid-area: ships;
     background-image: url("../assets/waves.jpeg");
     background-position: center;
@@ -36,7 +48,6 @@
     grid-area: log;
 }
 .game-board{
-position: relative;
 grid-area: board;
 width: 100%;
 height: 100%;
@@ -46,6 +57,10 @@ grid-template-columns: repeat(14, 1fr);
 row-gap: none;
 justify-items: center;
 align-self: center;
+}
+
+.board-display{
+    grid-area: display;
 }
 
 .game-log{
@@ -61,19 +76,18 @@ align-self: center;
 
 .board-row{
     width: 100%;
-    height: 100%;
-
+    height: 6%;
 }
+
+
 .board-cell{
-    width: 100%;
-    height: 100%;
-    max-height: 6vh;
+    height: 1vh;
+    width: auto;
     grid-row: 1/2;
     grid-column: 1/2;
     background-color: white;
     width: 100%;
     height: 100%;
     border: 1px solid black;
-
 }
 

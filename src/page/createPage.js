@@ -13,7 +13,7 @@ export function createPage(){
         },
         main: function(){
              const newMain = page.appendChild(document.createElement("main"));
-             newMain.setAttribute("class", "main w-100 h-100");
+             newMain.setAttribute("class", "main w-100 h-100 bg-black");
         },
         footer: function(){
             const newFooter = page.appendChild(document.createElement('footer'));

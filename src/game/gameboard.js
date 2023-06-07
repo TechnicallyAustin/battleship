@@ -11,9 +11,11 @@ function gameBoard(){
   //gameboard operations
 export const gameBoardOperations = {
     boardArray: [],
+    gameBoard: null,
     createGameBoard: function(){
         const gameBoard = document.createElement("div");
-        gameBoard.setAttribute("class", "game-board w-100 h-100");
+        gameBoard.setAttribute("class", "game-board w-100 h-100 bg-black");
+        this.gameBoard = gameBoard;
         const rows = 14;
         const cols = 14;
         for (let i = 0; i < rows; i++) {
