@@ -3,6 +3,7 @@ const gameboard = require("../src/game/gameboard")
     describe("Gameboard", () => {
         test("Gameboard() is defined", () => {
             expect(typeof gameboard).toBe("function");
+            expect(gameboard).toBeDefined();
         });
 
         test("Gameboard calls the ship factory function", () => {
@@ -44,7 +45,7 @@ const gameboard = require("../src/game/gameboard")
         });
 
         describe('gameboard.update()', () => {
-            test("Gameboard.update() updates the", () => {
+            test("Gameboard.update() updates the DOM", () => {
             });
         });
         
