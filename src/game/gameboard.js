@@ -23,7 +23,7 @@ export const gameBoardOperations = {
             gameBoard.appendChild(row);
             for (let j = 0; j < cols; j++) {
                 let cell = document.createElement("div");
-                cell.setAttribute("class", `board-cell cell-${j}`);
+                cell.setAttribute("class", `board-cell cell-${j} d-flex justify-content-center align-items-center`);
                 row.appendChild(cell);
                 this.boardArray.push(cell);
             }
@@ -31,23 +31,45 @@ export const gameBoardOperations = {
         return gameBoard;
     },
     boardLabels: function(){
-        const alphaLabels = document.querySelector(".row-0");
-        const alphaLabelValues = ["A","B","C","D","E","F","G","H","I","J","K","L","M"]
-        for (let i = 0; i < alphaLabels.children.length; i++) {
-            let cell = alphaLabels.children[i];
+        const createLabels = {
+            createAlphaLabels: function(){
+                const alphaLabels = document.querySelector(".row-0");
+                const alphaLabelValues = ["","A","B","C","D","E","F","G","H","I","J","K","L","M"]
+                for (let i = 0; i < alphaLabels.children.length; i++) {
+                    let cell = alphaLabels.children[i];
+                    
+                    let valueContainer = document.createElement("div");
+                    valueContainer.setAttribute("class", "alpha-value-container w-100 h-100 d-flex justify-content-center align-items-center bg-black text-white");
+                    cell.appendChild(valueContainer);
+                    
+                    let value = document.createElement("p")
+                    value.setAttribute("class", "value fs-2");
+                    value.textContent = alphaLabelValues[i]
+                    valueContainer.appendChild(value)
+                }
+            },
+            createNumLabels: function(){
+                const rows = document.querySelectorAll(".board-row");
+                for (let i = 1; i < rows.length; i++) {
+                    let row = rows[i];
+                    let cell = row.firstChild;
 
-            let valueContainer = document.createElement("div");
-            valueContainer.setAttribute("class", "value-container");
-            cell.appendChild(valueContainer);
+                    let valueContainer = document.createElement("div");
+                    valueContainer.setAttribute("class", "number-value-container w-100 h-100 d-flex justify-content-center align-items-center bg-black text-white");
+                    cell.appendChild(valueContainer);
 
-            let value = document.createElement("p")
-            value.setAttribute("class", "value");
-            value.textContent = alphaLabelValues[i]
-            valueContainer.appendChild(value)
-            //cell.innerHTML = alphaLabelValues[i]
+                    let value = document.createElement("p")
+                    value.setAttribute("class", "value fs-2 mb-0");
+                    value.textContent = i
+                    valueContainer.appendChild(value);
 
-
+                }
+            }
         }
+        createLabels.createAlphaLabels();
+        createLabels.createNumLabels();
+
+
     },
     updateGameBoard: function(){},
     resetGameBoard: function(){},
