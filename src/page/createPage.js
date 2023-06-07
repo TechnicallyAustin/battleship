@@ -23,8 +23,9 @@ export function createPage(){
     pageElements.header();
     pageElements.main();
     pageElements.footer();
-    buildPage;
+    buildPage();
 
     console.log(typeof createPage);
 }
+
 
