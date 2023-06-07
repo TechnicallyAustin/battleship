@@ -9,15 +9,15 @@ export function createPage(){
     const pageElements = {
         header: function(){
             const newHeader = page.appendChild(document.createElement('main'))
-            newHeader.setAttribute("class", 'header w-100 bg-light');
+            newHeader.setAttribute("class", 'header w-100 bg-black');
         },
         main: function(){
              const newMain = page.appendChild(document.createElement("main"));
-             newMain.setAttribute("class", "main w-100 bg-warning");
+             newMain.setAttribute("class", "main w-100 bg-light");
         },
         footer: function(){
             const newFooter = page.appendChild(document.createElement('footer'));
-            newFooter.setAttribute("class", 'footer w-100 bg-light');
+            newFooter.setAttribute("class", 'footer w-100 bg-black');
         }
     }
     pageElements.header();

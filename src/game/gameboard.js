@@ -1,36 +1,60 @@
-// Gameboard is 13 x 13
-    // A-M && 1-13
-
-//gameboard operations 
-    // create gameboard
-
-    // update gameboard
-
-    // render gameboard
-
-    // Winner
-    
-    // GameOver
-    
-    // Round Counter
-    
-    // Starting Player
-    
-// Gameboard Ship operations
-    // place ships
-    
-    // Remaining ships
-    
-    // Remove Ship
-
-// AttackLog
-    // MissedShots
-
-    //landedShots
-
-    // Recieve Attack
 
 
+function gameBoard(){
+  // Gameboard is 14 x 14
+  // A-M && 1-13
+
+  // Game Container
+    //const gameContainer = document.createElement("div");
+    //gameContainer.setAttribute("class", "game-container");
+}
+  //gameboard operations
+export const gameBoardOperations = {
+    boardArray: [],
+    createGameBoard: function(){
+        const gameBoard = document.createElement("div");
+        gameBoard.setAttribute("class", "game-board w-100 h-100");
+        const rows = 14;
+        const cols = 14;
+
+        for (let i = 0; i < rows; i++) {
+           let row = document.createElement("div");
+           row.setAttribute("class", "row");
+           this.boardArray.push(row);
+           gameBoard.appendChild(row);
+           for (let j = 0; j < cols; j++) {
+                let cell = document.createElement("div");
+                cell.setAttribute("class", "cell");
+                row.appendChild(cell);
+                this.boardArray.push(cell);
+           }
+        }
+        return gameBoard;
+    },
+    updateGameBoard: function(){},
+    resetGameBoard: function(){},
+    renderGameBoard: function(){},
+    winner: function(){},
+    gameOver: function(){},
+    roundCounter: function(){},
+    startingPlayer: function(){}
+};
+
+  // GameBoard Ship Operations
+  const gameBoardShips = {
+    placeShips: function () {},
+    remainingShips: function () {},
+    removeShip: function () {},
+  };
+
+  // GameBoard Attack Log Operations
+    const gameBoardAttackLog = {
+      missedShots: function () {},
+      landedShots: function () {},
+      recieveAttack: function () {},
+    };
+
+//}
 
 
 

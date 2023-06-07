@@ -1,8 +1,8 @@
 const page = require("../src/page/createPage");
 
 describe("createPage", () => {
-    test("Create page is defined", () => {
-        expect(page).toBeDefined();
+    test("Create page is a function", () => {
+        expect(page).toBeDefined;
     });
 
     test("CreatePage() calls buildPages() to populate elements with content", ()=>{

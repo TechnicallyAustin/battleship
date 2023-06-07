@@ -1,3 +1,2 @@
-function footerContent(){}
+export function footerContent(){}
 
-module.exports = footerContent;

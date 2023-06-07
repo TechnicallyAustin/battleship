@@ -1,9 +1,8 @@
 const gameboard = require("../src/game/gameboard")
 
     describe("Gameboard", () => {
-        test("Gameboard() is defined", () => {
+        test("Gameboard() is a function", () => {
             expect(typeof gameboard).toBe("function");
-            expect(gameboard).toBeDefined();
         });
 
         test("Gameboard calls the ship factory function", () => {

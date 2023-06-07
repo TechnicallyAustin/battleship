@@ -1,5 +1,4 @@
-function headerContent(){
+export function headerContent(){
 
 }
 
-module.exports = headerContent;
