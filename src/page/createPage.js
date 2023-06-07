@@ -8,7 +8,7 @@ export function createPage(){
     const page = document.querySelector('.page-content');
     const pageElements = {
         header: function(){
-            const newHeader = page.appendChild(document.createElement('main'))
+            const newHeader = page.appendChild(document.createElement('header'))
             newHeader.setAttribute("class", 'header w-100 bg-black d-flex justify-content-start align-items-center');
         },
         main: function(){

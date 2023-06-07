@@ -16,20 +16,30 @@ export const gameBoardOperations = {
         gameBoard.setAttribute("class", "game-board w-100 h-100");
         const rows = 14;
         const cols = 14;
-
         for (let i = 0; i < rows; i++) {
-           let row = document.createElement("div");
-           row.setAttribute("class", "row");
-           this.boardArray.push(row);
-           gameBoard.appendChild(row);
-           for (let j = 0; j < cols; j++) {
+            let row = document.createElement("div");
+            row.setAttribute("class", `row row-${i}`);
+            this.boardArray.push(row);
+            gameBoard.appendChild(row);
+            for (let j = 0; j < cols; j++) {
                 let cell = document.createElement("div");
-                cell.setAttribute("class", "cell");
+                cell.setAttribute("class", `cell cell-${j}`);
                 row.appendChild(cell);
                 this.boardArray.push(cell);
-           }
+            }
         }
         return gameBoard;
+    },
+    boardLabels: function(){
+        const alphaLabels = document.querySelector(".row-0");
+        const alphaLabelValues = ["A","B","C","D","E","F","G","H","I","J","K","L","M"]
+        for (let i = 0; i < alphaLabels.children.length; i++) {
+            let cell = alphaLabels.children[i];
+            //cell.textContent = alphaLabelValues[i]
+            //cell.innerHTML = alphaLabelValues[i]
+
+
+        }
     },
     updateGameBoard: function(){},
     resetGameBoard: function(){},
