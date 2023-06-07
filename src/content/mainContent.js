@@ -49,14 +49,15 @@ export function mainContent(){
         const createDisplay = document.createElement("div");
         createDisplay.setAttribute(
           "class",
-          "board-display w-100 h-75 d-flex justify-content-center align-items-center bg-black mx-2"
+          "board-display w-100 h-75 d-flex justify-content-center align-items-center bg-black bg-opacity-25 mx-2"
         );
 
         const displayValue = document.createElement("p");
         displayValue.setAttribute(
                   "class",
-                  "board-display-value w-100 h-100 d-flex justify-content-center align-items-center bg-opacity-50 fs-3 mx-3"
+                  "board-display-value w-100 h-100 d-flex justify-content-center align-items-center fs-3 mx-3 text-white"
                 );
+        displayValue.textContent = "Board Display value Goes here!";
         createDisplay.appendChild(displayValue);
         main.appendChild(createDisplay);
       },

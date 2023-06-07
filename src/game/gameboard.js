@@ -13,6 +13,7 @@ export const gameBoardOperations = {
     boardArray: [],
     gameBoard: null,
     createGameBoard: function(){
+        const alphaLabelValues = ["","A","B","C","D","E","F","G","H","I","J","K","L","M"]
         const gameBoard = document.createElement("div");
         gameBoard.setAttribute("class", "game-board w-100 h-100 bg-black");
         this.gameBoard = gameBoard;
@@ -25,7 +26,7 @@ export const gameBoardOperations = {
             gameBoard.appendChild(row);
             for (let j = 0; j < cols; j++) {
                 let cell = document.createElement("div");
-                cell.setAttribute("class", `board-cell cell-${j} d-flex justify-content-center align-items-center`);
+                cell.setAttribute("class", `board-cell cell-${alphaLabelValues[i]}-${j} d-flex justify-content-center align-items-center`);
                 row.appendChild(cell);
                 this.boardArray.push(cell);
             }
@@ -38,7 +39,9 @@ export const gameBoardOperations = {
                 const alphaLabels = document.querySelector(".row-0");
                 const alphaLabelValues = ["","A","B","C","D","E","F","G","H","I","J","K","L","M"]
                 for (let i = 0; i < alphaLabels.children.length; i++) {
+
                     let cell = alphaLabels.children[i];
+                    cell.classList.add(`coordinate-${alphaLabelValues[i]}-i`);
                     
                     let valueContainer = document.createElement("div");
                     valueContainer.setAttribute("class", "alpha-value-container w-100 h-100 d-flex justify-content-center align-items-center bg-black text-white");
