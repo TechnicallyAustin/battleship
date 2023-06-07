@@ -6,19 +6,23 @@ export function mainContent(){
     const mainElements = {
         shipContainer: function(){
             const container = document.createElement('div');
-            container.setAttribute('class','ship-container w-100 h-100 bg-secondary d-flex flex-column justify-content-start align-items-start');
+            container.setAttribute('class','ship-container w-100 h-100 d-flex flex-column justify-content-start align-items-start');
             main.appendChild(container)
 
             const containerElements = {
                 label: function(){
+                    const labelContainer = document.createElement('div');
+                    labelContainer.setAttribute('class','ship-container-label w-100 mb-0 fs-2 text-center text-white');
+                    container.appendChild(labelContainer);
+
                     const createLabel = document.createElement('p')
-                    createLabel.setAttribute('class', 'ship-container-label w-100 mb-0 fs-2 text-center');
+                    createLabel.setAttribute('class', 'ship-container-label w-100 mb-0 fs-2 text-center text-white bg-black bg-opacity-50');
                     createLabel.textContent = 'Your Ships';
-                    container.appendChild(createLabel)
+                    labelContainer.appendChild(createLabel)
                 },
                 displayShips: function(){
                     const shipContainer = document.createElement('div');
-                    shipContainer.setAttribute('class','ship-container-display w-100');
+                    shipContainer.setAttribute('class','ship-container-display w-100 h-100');
                     container.appendChild(shipContainer)
                 }
             }
@@ -31,24 +35,39 @@ export function mainContent(){
         },
         gameLog: function(){
             const log = document.createElement('div');
-            log.setAttribute('class', 'game-log w-100 h-100 bg-light');
+            log.setAttribute('class', 'game-log w-100 h-100');
             main.appendChild(log)
 
             const logElements = {
                 label: function(){
+                    const labelContainer = document.createElement('div');
+                    labelContainer.setAttribute('class', 'game-Log-label w-100 mb-0 fs-2 text-center text-white bg-black bg-opacity-25');
+                    log.appendChild(labelContainer);
+
                     const createLabel = document.createElement('p')
                     createLabel.setAttribute('class', 'game-Log-label w-100 mb-0 fs-2 text-center');
                     createLabel.textContent = 'Attack History';
-                    log.appendChild(createLabel)
+                    labelContainer.appendChild(createLabel);
                 },
                 historyContainer: function(){
                     const container = document.createElement('div');
-                    container.setAttribute('class', 'game-Log-history w-100');
+                    container.setAttribute('class', 'game-Log-history w-100 h-100 bg-black bg-opacity-50 border border-1 border-white');
                     log.appendChild(container)
+                },
+                currentRound: function(){
+                    const container = document.createElement('div');
+                    container.setAttribute('class', 'game-Log-current-round w-100 h-100 bg-black bg-opacity-50 text-white text-center');
+                    log.appendChild(container)
+
+                    const roundCount = document.createElement('p')
+                    roundCount.setAttribute('class', 'game-Log-round-count w-100 h-100 fs-4 mb-0');
+                    roundCount.textContent = 'Current Round: ###';
+                    container.appendChild(roundCount);
                 }
             }
             logElements.label();
             logElements.historyContainer();
+            logElements.currentRound();
         }
     }
     mainElements.addboard();

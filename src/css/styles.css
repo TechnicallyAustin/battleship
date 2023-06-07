@@ -24,7 +24,11 @@
 
 .ship-container{
     grid-area: ships;
+    background-image: url("../assets/waves.jpeg");
+    background-position: center;
+    background-size: cover;
 }
+
 
 .game-log{
     grid-area: log;
@@ -39,7 +43,17 @@ grid-template-columns: repeat(14, 1fr);
 row-gap: none;
 justify-items: center;
 align-self: center;
+}
 
+.game-log{
+    display: grid;
+    grid-template-rows: 1fr 18fr 1fr;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../assets/ship.jpeg);
+    background-position: center;
+    background-size: cover;
+    row-gap: 1%
 }
 
 .row{
