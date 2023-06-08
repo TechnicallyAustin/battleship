@@ -26,7 +26,10 @@ export const gameBoardOperations = {
             gameBoard.appendChild(row);
             for (let j = 0; j < cols; j++) {
                 let cell = document.createElement("div");
-                cell.setAttribute("class", `board-cell cell-${alphaLabelValues[i]}-${j} d-flex justify-content-center align-items-center`);
+                cell.setAttribute(
+                  "class",
+                  `cell-${alphaLabelValues[i]}-${j} board-cell d-flex justify-content-center align-items-center`
+                );
                 row.appendChild(cell);
                 this.boardArray.push(cell);
             }

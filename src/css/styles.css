@@ -91,3 +91,7 @@ align-self: center;
     border: 1px solid black;
 }
 
+.board-cell.hover{
+    background-color: aqua;
+}
+

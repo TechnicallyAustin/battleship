@@ -49,7 +49,7 @@ export function mainContent(){
         const createDisplay = document.createElement("div");
         createDisplay.setAttribute(
           "class",
-          "board-display w-100 h-75 d-flex justify-content-center align-items-center bg-black bg-opacity-25 mx-2"
+          "board-display w-100 h-75 d-flex justify-content-center align-items-center bg-black bg-opacity-25 mx-2 border border-Green border-2"
         );
 
         const displayValue = document.createElement("p");
