@@ -16,7 +16,7 @@ export function boardEvents(){
             });
                 
         },
-        sendHit: function(cell){
+        attack: function(cell){
             cell.addEventListener('click', function(){
                 cell.classList.add('attack');
                 console.log("clciked")
@@ -31,7 +31,7 @@ export function boardEvents(){
             let cell = col.childNodes[j]
             console.log("cell", cell)
             newBoardEvent.hoverNumbers(cell)
-            newBoardEvent.selectCell(cell)
+            newBoardEvent.attack(cell)
         }
 
 
