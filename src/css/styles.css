@@ -76,7 +76,7 @@ align-self: center;
 
 .game-log-history{
     height: auto;
-    max-height: 60vh;
+    max-height: 65vh;
     overflow-y: scroll;
 }
 
