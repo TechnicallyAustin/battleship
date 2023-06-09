@@ -1,5 +1,6 @@
 export function boardEvents(){
     const rows = document.querySelectorAll('.board-row');
+    const alphaLabelValues = ["","A","B","C","D","E","F","G","H","I","J","K","L","M"];
     const newBoardEvent = {
         hoverNumbers: function(cell){
             cell.addEventListener('mouseenter', () => {
@@ -31,6 +32,7 @@ export function boardEvents(){
         //console.log("col", col)
         for (let j = 0; j < col.childNodes.length; j ++){
             let cell = col.children[j]
+            cell.setAttribute("id", `${alphaLabelValues[j]}-${i}`);
             //console.log("cell", cell)
             newBoardEvent.hoverNumbers(cell)
             newBoardEvent.attack(cell)

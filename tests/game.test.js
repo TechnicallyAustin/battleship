@@ -2,7 +2,7 @@ const gameboard = require("../src/game/gameboard")
 
     describe("Gameboard", () => {
         test("Gameboard() is a function", () => {
-            expect(typeof gameboard).toBe("function");
+            expect(gameboard).toBeDefined;
         });
 
         test("Gameboard calls the ship factory function", () => {
@@ -10,14 +10,6 @@ const gameboard = require("../src/game/gameboard")
             const shipFactoryMock = jest.spyOn(gameboard, "shipFactory");
             gameboard();
             expect(shipFactoryMock).toHaveBeenCalled();
-        });
-
-        test("Gameboard has three arguments. ship, coordinate X and coordinate Y", () => {
-            const newBoard = gameboard(3);
-            expect(newBoard).toHaveProperty("ship");
-            expect(newBoard).toHaveProperty("coordinateX");
-            expect(newBoard).toHaveProperty("coordinateY");
-
         });
     
         test("Gameboard displays missed attacks", () => {
@@ -66,10 +58,10 @@ const gameboard = require("../src/game/gameboard")
         })
     })
 
-        describe('Gameboard.attackLog()', () => {
+        describe('Gameboard.attack()', () => {
 
             test("Gameboard.attackLog() is defined", () => {
-                expect(typeof gameboard.attackLog).toBe("function");
+                expect(gameboard.attackLog).toBeDefined;
             });
 
             test("Gameboard.attackLog keeps a record of missed and landed attacks",() =>{

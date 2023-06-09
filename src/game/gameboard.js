@@ -13,7 +13,7 @@ export const gameBoardOperations = {
     boardArray: [],
     gameBoard: null,
     createGameBoard: function(){
-        const alphaLabelValues = ["","A","B","C","D","E","F","G","H","I","J","K","L","M"]
+        const alphaLabelValues = ["","A","B","C","D","E","F","G","H","I","J","K","L","M"];
         const gameBoard = document.createElement("div");
         gameBoard.setAttribute("class", "game-board w-100 h-100 bg-black");
         this.gameBoard = gameBoard;
@@ -30,7 +30,7 @@ export const gameBoardOperations = {
                   "class",
                   `cell-${alphaLabelValues[i]}-${j} board-cell d-flex justify-content-center align-items-center`
                 );
-                cell.setAttribute("id", `${alphaLabelValues[i]}-${j}`);
+                //cell.setAttribute("id", `${alphaLabelValues[i]}-${j}`);
                 row.appendChild(cell);
                 this.boardArray.push(cell);
             }
