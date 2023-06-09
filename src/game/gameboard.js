@@ -79,6 +79,9 @@ export const gameBoardOperations = {
 
 
     },
+    highlighter: function(){
+        // highlights all cells in a row and in a column when selected
+    },
     updateGameBoard: function(){},
     resetGameBoard: function(){},
     renderGameBoard: function(){},
