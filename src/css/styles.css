@@ -95,3 +95,7 @@ align-self: center;
     background-color: aqua;
 }
 
+.board-cell.attack{
+    background-color: red;
+}
+
