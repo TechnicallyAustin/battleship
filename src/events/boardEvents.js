@@ -15,9 +15,9 @@ export function boardEvents(){
             console.log(cell.id);
             const log = document.querySelector('.game-log-history');
             const message = document.createElement("p");
-            message.setAttribute('class', 'game-log-entry text-white fs-4 mx-3');
+            message.setAttribute('class', 'game-log-entry text-white mx-3');
             log.appendChild(message);
-            message.textContent = cell.id;
+            message.textContent = ` current player attacked ${cell.id}`
         },
         attack: function(cell){
             cell.addEventListener('click', function(){

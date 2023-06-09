@@ -33,7 +33,7 @@ export function mainContent(){
             const shipContainer = document.createElement("div");
             shipContainer.setAttribute(
               "class",
-              "ship-container-display w-100 h-100 border-bottom border-2 border-white"
+              "ship-container-display w-100 h-100 border-bottom border-2 border-white d-flex justify-content-around align-items-center"
             );
             container.appendChild(shipContainer);
           },

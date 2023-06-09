@@ -5,6 +5,7 @@ import "../src/css/styles.css";
 import { createPage } from "./page/createPage";
 import { gameBoardOperations } from "./game/gameboard";
 import { boardEvents } from "./events/boardEvents";
+import { shipContent } from "./ships/shipContent";
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -12,6 +13,8 @@ document.addEventListener("DOMContentLoaded", () => {
     createPage()
     gameBoardOperations.boardLabels()
     boardEvents()
+    shipContent()
+    
 
 });
 
