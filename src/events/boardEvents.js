@@ -1,50 +1,39 @@
 export function boardEvents(){
-    const columnArray = []
-    const cellArray = []
     const rows = document.querySelectorAll('.board-row');
-
     const newBoardEvent = {
         hoverNumbers: function(cell){
             cell.addEventListener('mouseenter', () => {
                 cell.classList.add('hover');
-                console.log("hover")
             });
 
             cell.addEventListener('mouseleave', () => {
                 cell.classList.remove('hover');
-                console.log("leave")
             });
-                
+        },
+        populateLog: function(cell){
+            console.log(cell.id);
+            const log = document.querySelector('.game-log-history');
+            const message = document.createElement("p");
+            message.setAttribute('class', 'game-log-entry text-white fs-4 mx-3');
+            log.appendChild(message);
+            message.textContent = cell.id;
         },
         attack: function(cell){
             cell.addEventListener('click', function(){
                 cell.classList.add('attack');
-                console.log("clciked")
+                newBoardEvent.populateLog(cell);
             });
         }
     };
 
     for (let i = 1; i < rows.length; i ++){
         let col = rows[i]
-        console.log("col", col)
+        //console.log("col", col)
         for (let j = 0; j < col.childNodes.length; j ++){
-            let cell = col.childNodes[j]
-            console.log("cell", cell)
+            let cell = col.children[j]
+            //console.log("cell", cell)
             newBoardEvent.hoverNumbers(cell)
             newBoardEvent.attack(cell)
         }
-
-
     }
-    
-
-
-        
-
-
-
-
-
-        
-
 }

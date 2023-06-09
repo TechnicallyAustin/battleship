@@ -30,6 +30,7 @@ export const gameBoardOperations = {
                   "class",
                   `cell-${alphaLabelValues[i]}-${j} board-cell d-flex justify-content-center align-items-center`
                 );
+                cell.setAttribute("id", `${alphaLabelValues[i]}-${j}`);
                 row.appendChild(cell);
                 this.boardArray.push(cell);
             }
@@ -44,10 +45,10 @@ export const gameBoardOperations = {
                 for (let i = 0; i < alphaLabels.children.length; i++) {
 
                     let cell = alphaLabels.children[i];
-                    cell.classList.add(`coordinate-${alphaLabelValues[i]}-i`);
                     
                     let valueContainer = document.createElement("div");
                     valueContainer.setAttribute("class", "alpha-value-container w-100 h-100 d-flex justify-content-center align-items-center bg-black text-white");
+                    valueContainer.setAttribute("id",`coordinate-${alphaLabelValues[i]}-${i}`);
                     cell.appendChild(valueContainer);
                     
                     let value = document.createElement("p")
