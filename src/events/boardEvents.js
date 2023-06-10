@@ -1,6 +1,8 @@
 export function boardEvents(){
     const rows = document.querySelectorAll('.board-row');
     const alphaLabelValues = ["","A","B","C","D","E","F","G","H","I","J","K","L","M"];
+    const roundCounter = document.querySelector(".game-log-round-count")
+    let count = 1
     const newBoardEvent = {
         hoverNumbers: function(cell){
             cell.addEventListener('mouseenter', () => {
@@ -11,6 +13,10 @@ export function boardEvents(){
                 cell.classList.remove('hover');
             });
         },
+        updateRound: function(){
+            roundCounter.textContent = `Round: ${count++}`
+
+        },
         populateLog: function(cell){
             console.log(cell.id);
             const log = document.querySelector('.game-log-history');
@@ -18,6 +24,7 @@ export function boardEvents(){
             message.setAttribute('class', 'game-log-entry text-white mx-3');
             log.appendChild(message);
             message.textContent = ` current player attacked ${cell.id}`
+            this.updateRound()
         },
         attack: function(cell){
             cell.addEventListener('click', function(){

@@ -17,7 +17,7 @@ export function shipContent(){
         shipCard: null,
         newShipCard: function(){
           const newCard = document.createElement("div");
-          newCard.setAttribute('class','ship-card d-flex flex-column justify-content-around align-items-center w-75 h-75 bg-white bg-opacity-50 rounded');
+          newCard.setAttribute('class','ship-card d-flex flex-column justify-content-around align-items-center w-75 h-75 bg-white bg-opacity-50 rounded border border-black border-2');
           fleet.appendChild(newCard);
           this.shipCard = newCard;
       },

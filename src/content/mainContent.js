@@ -87,7 +87,7 @@ export function mainContent(){
             const container = document.createElement("div");
             container.setAttribute(
               "class",
-              "game-log-history w-100 h-100 bg-black bg-opacity-50 border border-1 border-white d-flex flex-column justify-content-start"
+              "game-log-history w-100 h-100 bg-black bg-opacity-50 border border-1 border-white d-flex flex-column justify-content-start me-2"
             );
             log.appendChild(container);
           },
@@ -104,7 +104,7 @@ export function mainContent(){
               "class",
               "game-log-round-count w-100 h-100 fs-4 mb-0 d-flex flex-column justify-content-start align-items-center"
             );
-            roundCount.textContent = "Current Round: ###";
+            roundCount.textContent = "Round:";
             container.appendChild(roundCount);
           },
         };
