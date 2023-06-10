@@ -43,13 +43,34 @@
 }
 
 .ship-container-display{
-overflow-y: scroll;
+    width: 100vw;
+    display: flex;
+    justify-items: center;
+    align-self: center;
 }
 
-.ship {
-    width: 100%;
-    height: 10vh;
+.ship-fleet{
+display: grid;
+grid-template-columns: repeat(5, 1fr);
+align-items: center;
+justify-content: center;
 }
+
+.ship-card{
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    height: 100%;
+    width: auto;
+
+
+}
+
+.ship-image {
+    width: 100%;
+    height: auto;
+}
+
 
 
 .game-log{

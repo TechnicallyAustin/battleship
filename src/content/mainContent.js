@@ -8,7 +8,7 @@ export function mainContent(){
         const container = document.createElement("div");
         container.setAttribute(
           "class",
-          "ship-container w-100 h-100 d-flex flex-column justify-content-start align-items-start"
+          "ship-container w-100 h-100 d-flex flex-column justify-content-start align-items-center"
         );
         main.appendChild(container);
 
@@ -33,7 +33,7 @@ export function mainContent(){
             const shipContainer = document.createElement("div");
             shipContainer.setAttribute(
               "class",
-              "ship-container-display w-100 h-100 border-bottom border-2 border-white d-flex justify-content-around align-items-center"
+              "ship-container-display h-100 border-bottom"
             );
             container.appendChild(shipContainer);
           },
