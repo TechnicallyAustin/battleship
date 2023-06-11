@@ -167,3 +167,5 @@ E. Create conditions so that the game ends once one players ships have all been 
     B. You can polish the intelligence of the computer player by having it try adjacent slots after getting a ‘hit’.
 
     C. Optionally, create a 2 player option that lets users take turns by passing the device back and forth. If you’re going to go this route, make sure the game is playable on a mobile screen and implement a ‘pass device’ screen so that players don’t see each others boards!
+
+new MBA
