@@ -1,4 +1,70 @@
 # battleship
+Pre Game Run Time:
+-- General Page is set up.
+-- Board is created.
+-- Event listeners are attached to the submit button.
+    -- prevent default is set for the form
+
+1. Player enters name and clicks start game.
+    A. after start is clicked...
+        - A player object is created with the name entered by the user in the new user form.
+        - A CPU Object is created.
+        - The player's ship cards are added to the page's ship container.
+        - the player is prompted to place ships on the board.
+        -- event listeners are added to the board.
+
+
+2. The player can click each ship or is automatically prompted to place ships on gameboard.
+        - once all 5 ships have been placed the game will randomizes which player will take the first shot.
+        - the starting player selects a cell on the board and clicks it.
+        - a shot is added to the gameboard and game attack history.
+
+            - shot is determined to be either a hit or miss.
+                -- if shot is a hit.
+                    -- the shot is categorized as a hit.
+                    -- the shit sustains 1 hit in damage.
+                    -- checks current health of ship
+                        -- if the ship has reached it's maximum shot limit.
+                            -- call ship.destroyed()
+
+                    -- the ship container is updated with the newly damaged ship
+                    -- the position of the most recent landed shot is displayed on the ship card.
+                        -- check the total number of remaining ships
+
+                        -- update the total ship count
+                            -- if either player has every ship destroyed
+                                -- call gameOver()
+                                -- Determine Winner
+                                -- Declare winner
+                                -- next player's turn
+                -- if the shot is a miss
+                    -- ths shot is categorized as a miss
+                    -- the gameboard highlights the missed shot.
+                    -- next player's turn.
+        
+            
+
+
+
+        
+
+
+        - The CPU will place their ships automatically.
+        - Once the player has placed each ship
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 You can use mocks to make sure that DOM methods like appendChild are being called, but try your best to keep those things outside of the app logic.
 
 1. Begin your app by creating the Ship factory function.
