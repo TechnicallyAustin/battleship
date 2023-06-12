@@ -16,20 +16,27 @@ Pre Game Run Time:
 
 2. The player can click each ship or is automatically prompted to place ships on gameboard.
         - once all 5 ships have been placed the game will randomizes which player will take the first shot.
+        - The CPU will place their ships automatically.
         - the starting player selects a cell on the board and clicks it.
         - a shot is added to the gameboard and game attack history.
 
             - shot is determined to be either a hit or miss.
-                -- if shot is a hit.
+                -- if the shot is a miss
+                    -- ths shot is categorized as a miss
+                    -- the gameboard highlights the missed shot.
+                    -- next player's turn.
+
+                -- if shot is a hit. {
+
                     -- the shot is categorized as a hit.
-                    -- the shit sustains 1 hit in damage.
+                    -- the ship sustains 1 hit in damage.
                     -- checks current health of ship
                         -- if the ship has reached it's maximum shot limit.
                             -- call ship.destroyed()
 
                     -- the ship container is updated with the newly damaged ship
                     -- the position of the most recent landed shot is displayed on the ship card.
-                        -- check the total number of remaining ships
+                    -- check the total number of remaining ships
 
                         -- update the total ship count
                             -- if either player has every ship destroyed
@@ -37,10 +44,7 @@ Pre Game Run Time:
                                 -- Determine Winner
                                 -- Declare winner
                                 -- next player's turn
-                -- if the shot is a miss
-                    -- ths shot is categorized as a miss
-                    -- the gameboard highlights the missed shot.
-                    -- next player's turn.
+                }
         
             
 
@@ -49,7 +53,6 @@ Pre Game Run Time:
         
 
 
-        - The CPU will place their ships automatically.
         - Once the player has placed each ship
 
 
