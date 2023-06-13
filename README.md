@@ -31,13 +31,14 @@ Player(){
 }
 Page(){
     Create
+    Content(){
+        header -- appends header content and elements to header
+        main -- appends main content and elements to main
+        footer -- appends footer content and elements to footer
+        shipContent -- appends ship Cards to Ship container
+    }
 }
 
-Content(){
-    header -- appends header content and elements to header
-    main -- appends main content and elements to main
-    footer -- appends footer content and elements to footer
-}
 
 Events(){
     boardEvents -- contains event listeners for the board events
@@ -100,7 +101,7 @@ Pre Game Run Time:
         
 
 
-        - Once the player has placed each ship
+
 
 
 
