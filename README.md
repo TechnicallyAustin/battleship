@@ -1,4 +1,53 @@
 # battleship
+ships(){
+    newShip -- creates a new ship object
+    placeShip -- places a single ship on the game board
+    hit -- adds a point of damage to the ships
+    destroyed -- counts the total number of hits on a ship object
+}
+
+Gameboard(){
+    create -- creates a new 13 x 13 gameboard
+    labels -- adds labels to the Gameboard
+    update -- updates the gameBoard with a hit or miss event
+    render -- adds the gameboard to the DOM
+    reset -- clears the game board of shots and ships
+}
+
+Game(){
+    attackLog -- keeps a running total of all of the shots made
+    landed -- keeps a record of all shots that hit ships
+    missed -- keeps a record of all missed shots
+    round -- keeps track of the current round 
+    shipsLeft -- keeps track of all remaining ships
+    GameOver -- checks if either player has no remaining ships
+    Win -- the player with remaining ships is declared the winner
+}
+
+Player(){
+    new -- creates a new player
+    computer -- creates a computer object
+    computerLogic -- methods to inteligently play battlefield
+}
+
+Content(){
+    header
+    main
+    footer
+}
+
+Events(){
+    boardEvents
+    shipEvents
+    pageEvents
+}
+
+Page(){
+    Create
+}
+
+
+
 Pre Game Run Time:
 -- General Page is set up.
 -- Board is created.
