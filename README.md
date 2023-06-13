@@ -29,23 +29,21 @@ Player(){
     computer -- creates a computer object
     computerLogic -- methods to inteligently play battlefield
 }
-
-Content(){
-    header
-    main
-    footer
-}
-
-Events(){
-    boardEvents
-    shipEvents
-    pageEvents
-}
-
 Page(){
     Create
 }
 
+Content(){
+    header -- appends header content and elements to header
+    main -- appends main content and elements to main
+    footer -- appends footer content and elements to footer
+}
+
+Events(){
+    boardEvents -- contains event listeners for the board events
+    shipEvents -- contains ship event listeners
+    pageEvents -- containes page event listeners
+}
 
 
 Pre Game Run Time:
