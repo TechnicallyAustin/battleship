@@ -1,3 +1,4 @@
+import {newPlayerForm} from '../player/newPlayerForm.js'
 export function headerContent(){
     const header = document.querySelector('.header');
 
@@ -8,30 +9,12 @@ export function headerContent(){
             title.textContent = 'Battleship'
             header.appendChild(title);
         },
-        gameButtons: function(){
-            const buttonContainer = document.createElement('div');
-            buttonContainer.setAttribute('class', ' h-100 w-25 d-flex justify-content-around align-items-center me-2');
-            header.appendChild(buttonContainer);
-            const buttons = {
-                start: function(){
-                    const startButton = document.createElement('button');
-                    startButton.setAttribute('class', 'btn btn-primary btn-lg w-50 h-75');
-                    startButton.textContent = 'Start';
-                    buttonContainer.appendChild(startButton);
-                },
-                cancel: function(){
-                    const cancelButton = document.createElement("button");
-                    cancelButton.setAttribute("class", "btn border-danger text-danger btn-lg w-50 h-75");
-                    cancelButton.textContent = "Cancel";
-                    buttonContainer.appendChild(cancelButton);
-                }
-            };
-            buttons.start();
-            buttons.cancel();
-        }   
+        form: function(){
+            header.append(newPlayerForm())
+        }
     };
     content.logo()
-    content.gameButtons()
+    content.form()
 
     
 }

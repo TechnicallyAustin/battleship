@@ -1,14 +1,7 @@
 
 
-function gameBoard(){
-  // Gameboard is 14 x 14
-  // A-M && 1-13
 
-  // Game Container
-    //const gameContainer = document.createElement("div");
-    //gameContainer.setAttribute("class", "game-container");
-}
-  //gameboard operations
+
 export const gameBoardOperations = {
     boardArray: [],
     gameBoard: null,
@@ -79,35 +72,9 @@ export const gameBoardOperations = {
         createLabels.createNumLabels();
 
 
-    },
-    highlighter: function(){
-        // highlights all cells in a row and in a column when selected
-    },
-    updateGameBoard: function(){},
-    resetGameBoard: function(){},
-    renderGameBoard: function(){},
-    winner: function(){},
-    gameOver: function(){},
-    roundCounter: function(){},
-    startingPlayer: function(){}
-};
-
-  // GameBoard Ship Operations
-  const gameBoardShips = {
-    placeShips: function () {},
-    remainingShips: function () {},
-    removeShip: function () {},
-  };
-
-  // GameBoard Attack Log Operations
-    const gameBoardAttackLog = {
-      missedShots: function () {},
-      landedShots: function () {},
-      recieveAttack: function () {},
-    };
-
-//}
-
+    }
+  }
+ 
 
 
 

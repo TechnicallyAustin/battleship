@@ -9,7 +9,7 @@ export function createPage(){
     const pageElements = {
         header: function(){
             const newHeader = page.appendChild(document.createElement('header'))
-            newHeader.setAttribute("class", 'header w-100 h-100 bg-black d-flex justify-content-between align-items-center');
+            newHeader.setAttribute("class", 'header w-100 h-100 bg-black d-flex justify-content-end align-items-center');
         },
         main: function(){
              const newMain = page.appendChild(document.createElement("main"));
